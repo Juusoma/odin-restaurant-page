@@ -1,15 +1,13 @@
 body{
     background-color: rgb(13, 13, 13);
+    color: white;
 }
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: white;
-}
-
-img{
+    color: inherit;
 }
 
 button{
@@ -37,18 +35,19 @@ button:hover{
     background-repeat: no-repeat;
     background-position: 50%;
     
-    background-image: url(./serjan-midili--9LB0GKPF0o-unsplash.jpg);
+    background-image: url(./serjan-midili--9LB0GKPF0o-unsplash.webp);
     box-shadow: inset 0 0 50px 10px black;
     filter: blur(8px);
 }
 
-.bg-link{
+.img-link{
     position: absolute;
-    bottom: 0;
+    bottom: 8px;
     left: 50%;
+    width: 100%;
     text-align: center;
     translate: -50% 0;
-    color: white;
+    color: rgb(255, 255, 255);
     opacity: .5;
 }
 
@@ -113,4 +112,48 @@ li > button:hover{
     display: flex;
     gap: 8px;
     align-items: center;
+}
+
+#content{
+    position: relative;
+    display: grid;
+    place-content: center;
+    margin-top: 10vh;
+}
+
+.home-container{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    border-radius: 25px;
+    border: 2px solid rgba(0, 0, 0, 0.25);
+}
+
+.home-image-container{
+    position: relative;
+    display: flex;
+}
+
+.home-image-container > img{
+    height: 400px;
+    width: auto;
+}
+
+.home-image-container *{
+    color: black;
+}
+
+.home-info{
+    background-color: #000000aa;
+    width: 25vw;
+    padding: 16px;
+}
+
+.home-info > h2{
+    font-size: 3rem;
+}
+
+.home-info > div{
+    margin-top: 16px;
 }
