@@ -1,6 +1,10 @@
 body{
     background-color: rgb(13, 13, 13);
     color: white;
+
+
+    --color-accent: rgba(255, 0, 0, 0.28);
+    --color-accent-low: rgba(146, 0, 0, 0.28);
 }
 
 *{
@@ -60,7 +64,7 @@ header{
 
 
     background-color: #00000057;
-    border-bottom: 2px solid rgba(255, 0, 0, 0.28);
+    border-bottom: 2px solid var(--color-accent);
 }
 
 header > h1{
@@ -138,6 +142,7 @@ li > button:hover{
 .home-image-container > img{
     height: 400px;
     width: auto;
+    border-right: 2px solid var(--color-accent);
 }
 
 .home-image-container *{
@@ -148,6 +153,8 @@ li > button:hover{
     background-color: #000000aa;
     width: 25vw;
     padding: 16px;
+    display: flex;
+    flex-direction: column;
 }
 
 .home-info > h2{
@@ -156,4 +163,32 @@ li > button:hover{
 
 .home-info > div{
     margin-top: 16px;
+}
+
+.home-info > button{
+    align-self: center;
+    margin-top: auto;
+    margin-bottom: 32px;
+    width: 200px;
+    height: 50px;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.644);
+    --color-bg: rgba(0, 0, 0, 0.446);
+    --color-hg: rgba(255, 255, 255, 0);
+    background: linear-gradient(-45deg, 
+                            var(--color-hg) 10px, 
+                            var(--color-hg) 10px,
+                            var(--color-hg) 16px,
+                            var(--color-bg) 16px, 
+                            var(--color-bg) 22px,
+                            var(--color-hg) 22px,
+                            var(--color-bg) 28px);
+    transition: border .2s;
+    border: 2px solid rgba(0, 0, 0, 0.25);
+}
+
+.home-info > button:hover{
+    --color-bg: rgba(87, 87, 87, 0.24);
+    border: 2px solid rgba(255, 255, 255, 0.5);
 }
