@@ -5,3 +5,17 @@ body{
 h1{
     color: white;
 }
+
+.bg-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(./serjan-midili--9LB0GKPF0o-unsplash.jpg);
+    opacity: .5;
+    filter: blur(8px);
+}
