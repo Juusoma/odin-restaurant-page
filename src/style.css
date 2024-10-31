@@ -10,8 +10,6 @@ body{
 }
 
 img{
-    max-width: 100%;
-    height: auto;
 }
 
 button{
@@ -35,9 +33,9 @@ button:hover{
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-size: 110%;
+    background-size: max(110vw, 110vh);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 50%;
     
     background-image: url(./serjan-midili--9LB0GKPF0o-unsplash.jpg);
     box-shadow: inset 0 0 50px 10px black;

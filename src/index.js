@@ -1,11 +1,9 @@
 import "./style.css";
 
 const bgImage = document.querySelector(".bg-image");
-const bgTravel = 2;
+const bgTravel = 10;
 document.addEventListener("mousemove", e => {
-    const x = (e.clientX / window.innerWidth * 2 - 1) * bgTravel;
-    const y = (e.clientY / window.innerHeight * 2 - 1) * bgTravel;
-    const positionX = 50 + x;
-    const positionY = 50 + y;
-    bgImage.style["background-position"] = `${positionX}% ${positionY}%`;
+    const x = (e.clientX / window.innerWidth) * bgTravel;
+    const y = (e.clientY / window.innerHeight) * bgTravel;
+    bgImage.style["background-position"] = `${x}px ${y}px`;
 });
