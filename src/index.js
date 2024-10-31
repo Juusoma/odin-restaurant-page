@@ -1,5 +1,4 @@
 import "./style.css";
-console.log("I like pizza");
 
 const bgImage = document.querySelector(".bg-image");
 const bgTravel = 5;

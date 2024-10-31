@@ -2,11 +2,26 @@ body{
     background-color: rgb(13, 13, 13);
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    color: white;
+}
+
 h1{
     color: white;
 }
 
+.bg-container{
+    opacity: .5;
+}
+
 .bg-image{
+    z-index: -1;
     position: absolute;
     top: 0;
     left: 0;
@@ -16,6 +31,15 @@ h1{
     background-repeat: no-repeat;
     background-position: center;
     background-image: url(./serjan-midili--9LB0GKPF0o-unsplash.jpg);
-    opacity: .5;
     filter: blur(8px);
+}
+
+.bg-link{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    text-align: center;
+    translate: -50% 0;
+    color: white;
+    opacity: .5;
 }
