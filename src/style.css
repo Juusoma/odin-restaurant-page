@@ -1,7 +1,8 @@
 body{
     background-color: rgb(13, 13, 13);
     color: white;
-
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    line-height: 1.3;
 
     --color-accent: rgba(255, 0, 0, 0.28);
     --color-accent-low: rgba(146, 0, 0, 0.28);
@@ -12,6 +13,7 @@ body{
     padding: 0;
     box-sizing: border-box;
     color: inherit;
+    font-family: inherit;
 }
 
 button{
@@ -41,7 +43,7 @@ button:hover{
     
     background-image: url(./serjan-midili--9LB0GKPF0o-unsplash.webp);
     box-shadow: inset 0 0 50px 10px black;
-    filter: blur(8px);
+    filter: blur(8px) saturate(1.4) hue-rotate(-5deg);
 }
 
 .img-link{
@@ -132,6 +134,7 @@ li > button:hover{
     align-items: stretch;
     border-radius: 25px;
     border: 2px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.471);
 }
 
 .home-image-container{
@@ -172,7 +175,7 @@ li > button:hover{
     width: 200px;
     height: 50px;
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     background-color: rgba(0, 0, 0, 0.644);
     --color-bg: rgba(0, 0, 0, 0.446);
     --color-hg: rgba(255, 255, 255, 0);
