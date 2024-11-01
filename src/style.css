@@ -128,8 +128,9 @@ li > button:hover{
 
 .home-container{
     overflow: hidden;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 400px auto;
+    grid-template-rows: auto;
     align-items: stretch;
     border-radius: 25px;
     border: 2px solid rgba(0, 0, 0, 0.25);
@@ -138,12 +139,17 @@ li > button:hover{
 
 .home-image-container{
     position: relative;
-    display: flex;
+    overflow: hidden;
 }
 
 .home-image-container > img{
-    height: 400px;
-    width: auto;
+    position:absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    max-width: 100%;
     border-right: 2px solid var(--color-accent);
 }
 
@@ -154,9 +160,10 @@ li > button:hover{
 .home-info{
     background-color: #000000aa;
     width: 25vw;
-    padding: 16px;
+    flex: 1;
     display: flex;
     flex-direction: column;
+    padding: 50px;
 }
 
 .home-info > h2{
@@ -169,8 +176,7 @@ li > button:hover{
 
 .home-info > button{
     align-self: center;
-    margin-top: auto;
-    margin-bottom: 32px;
+    margin-top: 100px;
     width: 200px;
     height: 50px;
     border-radius: 8px;
