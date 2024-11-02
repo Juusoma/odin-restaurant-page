@@ -221,8 +221,8 @@ li > button:active{
     border-radius: 8px;
     font-size: 1.2rem;
     background-color: rgba(0, 0, 0, 0.644);
-    --color-bg: rgba(0, 0, 0, 0.446);
-    --color-hg: rgba(255, 255, 255, 0);
+    --color-bg: rgba(2, 2, 2, 0.781);
+    --color-hg: rgba(251, 137, 137, 0.038);
     background: linear-gradient(-45deg, 
                             var(--color-hg) 10px, 
                             var(--color-hg) 10px,
@@ -232,7 +232,7 @@ li > button:active{
                             var(--color-hg) 22px,
                             var(--color-bg) 28px);
     transition: border .2s;
-    border: 2px solid rgba(0, 0, 0, 0.25);
+    border: 2px solid rgba(30, 30, 30, 0.704);
 }
 
 .home-info > button:hover{
@@ -274,7 +274,7 @@ li > button:active{
     text-align: center;
     font-weight: bold;
     align-self: end;
-    background-color: var(--color-accent);
+    background-color: var(--color-accent-high);
 }
 
 .menu-item{
@@ -297,4 +297,5 @@ li > button:active{
 .menu-item-price{
     font-size: 2.2rem;
     font-weight: bold;
+    justify-self: end;
 }

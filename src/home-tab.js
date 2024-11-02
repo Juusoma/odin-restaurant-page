@@ -1,7 +1,7 @@
 import pizza_knead_tiny from "./pizza_knead_tiny.webp";
 
-function buildHome(){
-    return `
+function buildHome(container){
+    container.innerHTML =  `
         <div class="home-container">
             <div class="home-image-container">
                 <img src=${pizza_knead_tiny} alt="chef kneading pizza dough">
@@ -16,7 +16,7 @@ function buildHome(){
                 <button onclick="clickMenu()">Menu</button>
             </div>
         </div>
-    `    
+    `; 
 }
 
 export { buildHome }

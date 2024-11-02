@@ -20,7 +20,17 @@ const tabs = (function(){
         if(currentTabButton){
             currentTabButton.classList.remove("active");
         }
-        contentContainer.innerHTML = button.dataset.builder;
+        switch(button.dataset.tab){
+            case "home":
+                buildHome(contentContainer);
+                break;
+            case "menu":
+                buildMenu(contentContainer);
+                break;
+            default:
+                console.error(`Unknown tab: ${button.dataset.tab}`);
+                break;
+        }
         button.classList.add("active");
         currentTabButton = button;
     }
@@ -33,9 +43,9 @@ window.clickMenu = function(){
 }
 
 const homeButton = document.querySelector("#home-button");
-homeButton.dataset.builder = buildHome();
+homeButton.dataset.tab = "home";
 const menuButton = document.querySelector("#menu-button");
-menuButton.dataset.builder = buildMenu();
+menuButton.dataset.tab = "menu";
 
 homeButton.addEventListener("click", () => tabs.changeTab(homeButton));
 menuButton.addEventListener("click", () => tabs.changeTab(menuButton));
