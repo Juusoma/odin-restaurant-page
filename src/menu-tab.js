@@ -15,7 +15,7 @@ const pizzas = [
         name: "Quattro Formaggi",
         description: "Mozzarella, gorgonzola, parmesan, goat cheese",
         price: 8,
-        new: true,
+        new: false,
     },
     {
         name: "Hawaiian",
@@ -45,13 +45,13 @@ const pizzas = [
         name: "Mediterranean",
         description: "Olive oil, mozzarella, feta, spinach, sun-dried tomatoes, olives",
         price: 9,
-        new: true,
+        new: false,
     },
     {
         name: "Truffle Mushroom",
         description: "Truffle oil, mozzarella, mushrooms, garlic, parsley",
         price: 10,
-        new: true,
+        new: false,
     },
     {
         name: "Prosciutto e Rucola",
@@ -72,13 +72,13 @@ const specials = [
         name: "Seafood Extravaganza",
         description: "Tomato sauce, mozzarella, shrimp, calamari, smoked salmon, garlic",
         price: 14,
-        new: true,
+        new: false,
     },
     {
         name: "Firecracker",
         description: "Spicy tomato sauce, mozzarella, hot salami, chili flakes, jalapeños, red onions",
         price: 11,
-        new: true,
+        new: false,
     },
     {
         name: "Caprese Supreme",
@@ -90,7 +90,7 @@ const specials = [
         name: "Fig & Prosciutto",
         description: "Olive oil base, mozzarella, figs, prosciutto, blue cheese, arugula",
         price: 13,
-        new: true,
+        new: false,
     },
     {
         name: "The Green Garden",
@@ -117,13 +117,13 @@ const salads = [
         name: "Caprese Salad",
         description: "Tomatoes, mozzarella, fresh basil, balsamic glaze",
         price: 6.5,
-        new: true,
+        new: false,
     },
     {
         name: "Quinoa Salad",
         description: "Quinoa, arugula, cherry tomatoes, avocado, cucumber, lemon dressing",
         price: 7,
-        new: true,
+        new: false,
     },
     {
         name: "Spinach & Berry Salad",
@@ -156,7 +156,7 @@ const drinks = [
         name: "Mango Smoothie",
         description: "Fresh mango, yogurt, honey, ice",
         price: 4.5,
-        new: true,
+        new: false,
     },
     {
         name: "Berry Blast Smoothie",
@@ -180,7 +180,7 @@ const drinks = [
         name: "Hot Chocolate",
         description: "Warm chocolate drink with whipped cream",
         price: 3,
-        new: true,
+        new: false,
     },
 ];
 
@@ -204,9 +204,14 @@ function addSectionTitle(titleText, parentElement){
 function addSectionItem(sectionItemData, parentElement){
     const sectionItem = document.createElement("div");
     sectionItem.classList.add("menu-item");
+    let itemName = sectionItemData.name;
+    if(sectionItemData.new){
+        sectionItem.classList.add("new");
+        itemName += " (NEW)";
+    }
     sectionItem.innerHTML = `
         <div class="menu-item-info">
-            <h4 class="menu-item-title">${sectionItemData.name}</h4>
+            <h4 class="menu-item-title">${itemName}</h4>
             <p class="menu-item-description">${sectionItemData.description}</p>
         </div>
         <span class="menu-item-price">€${sectionItemData.price}</span>
