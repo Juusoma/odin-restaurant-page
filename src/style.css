@@ -6,6 +6,7 @@ body{
 
     --color-accent: rgba(255, 0, 0, 0.28);
     --color-accent-low: rgba(146, 0, 0, 0.28);
+    --color-accent-high: rgba(255, 0, 0, 0.587);
 
     --color-background: #000000aa;
     --padding-background: 50px;
@@ -101,7 +102,9 @@ li > button{
     padding-inline: 25px;
     background-color: #00000000;
     border-left: 2px solid rgba(0, 0, 0, 0.28);
+    border-bottom: 0px solid black;
     font-weight: bold;
+    transition: all .2s;
 }
 
 li:last-child > button{
@@ -112,9 +115,13 @@ li > button:hover{
     background-color: var(--color-accent-low);
 }
 
+li > button:active{
+    background-color: var(--color-accent-high);
+}
+
 .active{
     background-color: var(--color-accent);
-    border-left: 2px solid var(--color-accent);
+    border-bottom: 4px solid var(--color-accent);
 }
 
 .contact-info{
@@ -226,11 +233,11 @@ li > button:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 25px;
 }
 
 .menu-container-title{
     font-size: 4rem;
-    margin-bottom: 50px;
 }
 
 .menu-items{
