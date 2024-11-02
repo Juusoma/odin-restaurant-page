@@ -12,5 +12,4 @@ document.addEventListener("mousemove", e => {
 
 
 const contentContainer = document.querySelector("#content");
-contentContainer.innerHTML = buildHome();
-console.log(contentContainer);
+//contentContainer.innerHTML = buildHome();
