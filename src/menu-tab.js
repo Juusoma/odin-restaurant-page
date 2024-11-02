@@ -214,20 +214,11 @@ function addSectionItem(sectionItemData, parentElement){
             <h4 class="menu-item-title">${itemName}</h4>
             <p class="menu-item-description">${sectionItemData.description}</p>
         </div>
-        <span class="menu-item-price">€${sectionItemData.price}</span>
+        <span class="menu-item-price">${sectionItemData.price} €</span>
     `
     parentElement.appendChild(sectionItem);
     return sectionItem;
 }
-
-`
-<div class="menu-item">
-    <div class="menu-item-info">
-        <h4 class="menu-item-title">Crosconne</h4>
-        <p class="menu-item-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-    </div>
-    <span class="menu-item-price">$3</span>
-</div>`
 
 function buildMenu(container){
     container.innerHTML = `

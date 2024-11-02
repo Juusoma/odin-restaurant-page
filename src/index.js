@@ -3,11 +3,21 @@ import { buildHome } from "./home-tab.js";
 import { buildMenu } from "./menu-tab.js";
 
 const bgImage = document.querySelector(".bg-image");
-const bgTravel = 10;
+const bgMouseTravel = 10;
+let bgX = 0;
+let bgY = 0;
+let scrollY;
+const bgScrollFactor = 0.5;
 document.addEventListener("mousemove", e => {
-    const x = -(e.clientX / window.innerWidth) * bgTravel;
-    const y = -(e.clientY / window.innerHeight) * bgTravel;
-    bgImage.style["background-position"] = `${x}px ${y}px`;
+    bgX = -(e.clientX / window.innerWidth) * bgMouseTravel;
+    bgY = -(e.clientY / window.innerHeight) * bgMouseTravel;
+    bgImage.style["background-position"] = `${bgX}px ${bgY + scrollY}px`;
+});
+
+document.addEventListener("scroll", (e) => {
+    const yOffset = window.scrollY;
+    scrollY = -yOffset*bgScrollFactor;
+    bgImage.style["background-position"] = `${bgX}px ${bgY + scrollY}px`;
 });
 
 const tabs = (function(){
