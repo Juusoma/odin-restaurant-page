@@ -13,7 +13,7 @@ function buildHome(){
                 <h2>PIZZA</h2>
                 <h3><i>Since 1996</i></h3>
                 <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio laudantium dicta inventore pariatur debitis ducimus consequuntur facilis, rerum ex labore hic sed, totam aperiam quam. Officiis id odio reprehenderit quos harum nesciunt quam exercitationem? At odio modi excepturi, tenetur sapiente inventore quisquam esse deleniti id exercitationem consequuntur alias molestias veniam?</div>
-                <button>Menu</button>
+                <button onclick="clickMenu()">Menu</button>
             </div>
         </div>
     `    

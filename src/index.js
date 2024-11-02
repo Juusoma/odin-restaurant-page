@@ -15,6 +15,8 @@ const tabs = (function(){
     let currentTabButton;
     
     function changeTab(button){
+        if(button == currentTabButton) return;
+
         if(currentTabButton){
             currentTabButton.classList.remove("active");
         }
@@ -25,6 +27,10 @@ const tabs = (function(){
 
     return {changeTab};
 }());
+
+window.clickMenu = function(){
+    menuButton.dispatchEvent(new MouseEvent("click"));
+}
 
 const homeButton = document.querySelector("#home-button");
 homeButton.dataset.builder = buildHome();
