@@ -109,7 +109,12 @@ li:last-child > button{
 }
 
 li > button:hover{
-    background-color: #b7b7b723;
+    background-color: var(--color-accent-low);
+}
+
+.active{
+    background-color: var(--color-accent);
+    border-left: 2px solid var(--color-accent);
 }
 
 .contact-info{
