@@ -1,4 +1,5 @@
 import "./style.css";
+import { buildHome } from "./home-tab.js";
 
 const bgImage = document.querySelector(".bg-image");
 const bgTravel = 10;
@@ -7,3 +8,9 @@ document.addEventListener("mousemove", e => {
     const y = -(e.clientY / window.innerHeight) * bgTravel;
     bgImage.style["background-position"] = `${x}px ${y}px`;
 });
+
+
+
+const contentContainer = document.querySelector("#content");
+contentContainer.innerHTML = buildHome();
+console.log(contentContainer);
