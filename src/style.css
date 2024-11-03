@@ -320,9 +320,73 @@ li > button:active{
     gap: 32px;
 }
 
+.contact-container > div {
+    border-left: 2px solid rgba(143, 143, 143, 0.261);
+    padding-left: 32px;
+}
+
+.contact-container > div:first-of-type{
+    border-left: none;
+    padding-left: 0px;
+}
+
+.contact-container > div > h2{
+    margin-bottom: 32px;
+}
+
+.contact-information > ul{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-block: 32px;
+}
+
+.contact-information > ul > li{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.map-button{
+    position: relative;
+    align-self: center;
+    border-radius: 8px;
+    overflow: hidden;
+    background: none;
+}
+
+.map-button > img{
+    width: 100%;
+    transition: all .2s;
+}
+
+.map-button > svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    translate: -50% -50%;
+    visibility: hidden;
+}
+
+.map-button:hover > img{
+    filter: brightness(.25);
+}
+
+
+.map-button:hover > svg{
+    visibility: visible;
+}
+
+.opening-hours > ul{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
 .contact-form{
     padding-left: 32px;
-    border-left: 2px solid grey;
 }
 
 .contact-form > h2{
@@ -342,13 +406,23 @@ li > button:active{
     gap: 32px;
 }
 
-input[type="text"], input[type="email"], textarea{
+input,textarea{
     background-color: rgba(0, 0, 0, 0.301);
     border-radius: 8px;
     border: 2px solid rgba(255, 255, 255, 0.265);
     padding: 8px;
     font-size: 1rem;
-    width: 200px;
+    width: 250px;
+    outline: none;
+}
+
+textarea{
+    width: 300px;
+}
+
+input:focus, textarea:focus{
+    border: 2px solid rgb(189, 189, 189);
+    box-shadow: 2px 2px 4px 0 rgba(255, 255, 255, 0.235);
 }
 
 .contact-form > form > button{
