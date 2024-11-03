@@ -237,21 +237,21 @@ function buildMenu(container){
 
 
     const specialSection = addMenuSection(menuItemContainer);
-    addSectionTitle("Special", specialSection);
+    addSectionTitle("Specials", specialSection);
     for(let special of specials){
         addSectionItem(special, specialSection);
     }
 
 
     const saladSection = addMenuSection(menuItemContainer);
-    addSectionTitle("Salad", saladSection);
+    addSectionTitle("Salads", saladSection);
     for(let salad of salads){
         addSectionItem(salad, saladSection);
     }
 
 
     const drinkSection = addMenuSection(menuItemContainer);
-    addSectionTitle("Drink", drinkSection);
+    addSectionTitle("Drinks", drinkSection);
     for(let drink of drinks){
         addSectionItem(drink, drinkSection);
     }

@@ -10,8 +10,8 @@ body{
     --color-accent-high: rgba(255, 0, 0, 0.587);
 
     --color-background: #000000aa;
+
     --padding-background: 50px;
-    --border-radius-background: 50px;
 }
 
 *{
@@ -104,7 +104,7 @@ li{
 
 li > button{
     height: 100%;
-    padding-inline: 25px;
+    width: 100px;
     background-color: #00000000;
     border-bottom: 0px solid black;
     font-weight: bold;
@@ -155,6 +155,8 @@ li > button:active{
                 inset 0 0 50px 0 rgba(84, 84, 84, 0.357);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.866) 20%, rgba(0, 0, 0, 0.6) 80%,  rgba(38, 38, 38, 0.635));
     border: 4px solid rgba(44, 44, 44, 0.643);
+    border-radius: 50px;
+    padding: var(--padding-background);
 }
 
 @keyframes fade {
@@ -169,13 +171,13 @@ li > button:active{
     }
 }
 
-.home-container{
+#content > .home-container{
     overflow: hidden;
     display: grid;
     grid-template-columns: 400px auto;
     grid-template-rows: auto;
     align-items: stretch;
-    border-radius: var(--border-radius-background);
+    padding: 0px;
 }
 
 .home-image-container{
@@ -243,8 +245,6 @@ li > button:active{
 
 
 .menu-container{
-    border-radius: var(--border-radius-background);
-    padding: var(--padding-background);
     height: 100%;
     width: 100%;
 
@@ -276,7 +276,11 @@ li > button:active{
     text-align: center;
     font-weight: bold;
     align-self: end;
-    background-color: var(--color-accent-high);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background: linear-gradient(0deg, var(--color-accent-high), var(--color-accent));
+    border: 2px solid var(--color-accent);
+    box-shadow: inset 0 0 10px 0 grey;
 }
 
 .menu-item{
@@ -307,4 +311,52 @@ li > button:active{
 .new{
     border-left: 2px solid var(--color-accent-low);
     background-color: var(--color-accent-low);
+}
+
+
+.contact-container{
+    display: grid;
+    grid-template-columns: 250px 250px 1fr;
+    gap: 32px;
+}
+
+.contact-form{
+    padding-left: 32px;
+    border-left: 2px solid grey;
+}
+
+.contact-form > h2{
+    margin-bottom: 32px;
+}
+
+.contact-form > form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 1.2rem;
+}
+
+.contact-form > form > div{
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+input[type="text"], input[type="email"], textarea{
+    background-color: rgba(0, 0, 0, 0.301);
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.265);
+    padding: 8px;
+    font-size: 1rem;
+    width: 200px;
+}
+
+.contact-form > form > button{
+    background: linear-gradient(0deg, var(--color-accent), var(--color-accent-high));
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.265);
+    padding: 8px 32px;
+    width: min-content;
+    align-self: end;
+    font-size: 1.2rem;
 }

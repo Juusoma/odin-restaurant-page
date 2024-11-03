@@ -60,4 +60,4 @@ menuButton.dataset.tab = "menu";
 homeButton.addEventListener("click", () => tabs.changeTab(homeButton));
 menuButton.addEventListener("click", () => tabs.changeTab(menuButton));
 
-menuButton.dispatchEvent(new MouseEvent("click"));
+//menuButton.dispatchEvent(new MouseEvent("click"));
