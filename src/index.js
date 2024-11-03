@@ -7,7 +7,7 @@ const bgImage = document.querySelector(".bg-image");
 const bgMouseTravel = 10;
 let bgX = 0;
 let bgY = 0;
-let scrollY;
+let scrollY = 0;
 const bgScrollFactor = 0.5;
 document.addEventListener("mousemove", e => {
     bgX = -(e.clientX / window.innerWidth) * bgMouseTravel;
