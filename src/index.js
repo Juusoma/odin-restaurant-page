@@ -1,6 +1,7 @@
 import "./style.css";
 import { buildHome } from "./home-tab.js";
 import { buildMenu } from "./menu-tab.js";
+import { buildContact } from "./contact-tab.js";
 
 const bgImage = document.querySelector(".bg-image");
 const bgMouseTravel = 10;
@@ -37,6 +38,9 @@ const tabs = (function(){
             case "menu":
                 buildMenu(contentContainer);
                 break;
+            case "contact":
+                buildContact(contentContainer);
+                break;
             default:
                 console.error(`Unknown tab: ${button.dataset.tab}`);
                 break;
@@ -56,8 +60,11 @@ const homeButton = document.querySelector("#home-button");
 homeButton.dataset.tab = "home";
 const menuButton = document.querySelector("#menu-button");
 menuButton.dataset.tab = "menu";
+const contactButton = document.querySelector("#contact-button");
+contactButton.dataset.tab = "contact";
 
 homeButton.addEventListener("click", () => tabs.changeTab(homeButton));
 menuButton.addEventListener("click", () => tabs.changeTab(menuButton));
+contactButton.addEventListener("click", () => tabs.changeTab(contactButton));
 
-//menuButton.dispatchEvent(new MouseEvent("click"));
+homeButton.dispatchEvent(new MouseEvent("click"));
