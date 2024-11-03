@@ -339,14 +339,18 @@ li > button:active{
 
 .map-button{
     position: relative;
+    width: 250px;
+    height: 250px;
     align-self: center;
     border-radius: 8px;
     overflow: hidden;
     background: none;
+    border: 2px solid white;
 }
 
 .map-button > img{
     width: 100%;
+    height: 100%;
     transition: all .2s;
 }
 
@@ -362,6 +366,7 @@ li > button:active{
 
 .map-button:hover > img{
     filter: brightness(.25);
+    scale: 1.1;
 }
 
 
@@ -431,5 +436,5 @@ input:focus, textarea:focus{
 
 .action-button:hover{
     background-position-y: 0%;
-    border-color: rgb(255, 255, 255);
+    border-color: rgba(255, 255, 255, 0.489);
 }
