@@ -219,30 +219,11 @@ li > button:active{
 .home-info > button{
     align-self: center;
     margin-top: 100px;
-    width: 200px;
+    width: 150px;
     height: 50px;
     border-radius: 8px;
     font-size: 1.2rem;
-    background-color: rgba(0, 0, 0, 0.644);
-    --color-bg: rgba(2, 2, 2, 0.781);
-    --color-hg: rgba(251, 137, 137, 0.038);
-    background: linear-gradient(-45deg, 
-                            var(--color-hg) 10px, 
-                            var(--color-hg) 10px,
-                            var(--color-hg) 16px,
-                            var(--color-bg) 16px, 
-                            var(--color-bg) 22px,
-                            var(--color-hg) 22px,
-                            var(--color-bg) 28px);
-    transition: border .2s;
-    border: 2px solid rgba(30, 30, 30, 0.704);
 }
-
-.home-info > button:hover{
-    --color-bg: rgba(87, 87, 87, 0.24);
-    border: 2px solid rgba(255, 255, 255, 0.5);
-}
-
 
 .menu-container{
     height: 100%;
@@ -425,12 +406,20 @@ input:focus, textarea:focus{
     box-shadow: 2px 2px 4px 0 rgba(255, 255, 255, 0.235);
 }
 
-.contact-form > form > button{
-    background: linear-gradient(0deg, var(--color-accent), var(--color-accent-high));
+.action-button{
+    background: linear-gradient(0deg, var(--color-accent), var(--color-accent-high) 50%, var(--color-accent-high)100%);
+    background-size: 100% 200%;
+    background-position-y: 100%;
     border-radius: 8px;
     border: 2px solid rgba(255, 255, 255, 0.265);
     padding: 8px 32px;
     width: min-content;
     align-self: end;
     font-size: 1.2rem;
+    transition: all .2s;
+}
+
+.action-button:hover{
+    background-position-y: 0%;
+    border-color: rgb(255, 255, 255);
 }
