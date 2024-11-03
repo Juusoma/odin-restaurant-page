@@ -174,7 +174,8 @@ li > button:active{
     }
 }
 
-.home-container{
+/*Ensure higher specificity, don't change!*/
+#content .home-container{
     overflow: hidden;
     display: grid;
     max-width: 1000px;
