@@ -316,7 +316,6 @@ li > button:active{
 }
 
 .contact-container > * {
-    padding-left: 32px;
     grid-column: span 2;
     padding: 32px;
 }
@@ -329,7 +328,7 @@ li > button:active{
     display: flex;
     flex-direction: column;
     gap: 16px;
-    margin-block: 32px;
+    margin-bottom: 32px;
 }
 
 .contact-information > ul > li{
