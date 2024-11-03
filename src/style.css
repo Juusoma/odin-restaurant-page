@@ -225,7 +225,7 @@ li > button:active{
 }
 
 .menu-container{
-    height: 100%;
+    height: min-content;
     width: 100%;
 
     display: flex;
@@ -240,7 +240,19 @@ li > button:active{
 
 .menu-items{
     width: 100%;
-    column-count: 3;
+    column-count: 4;
+
+    @media only screen and (max-width: 1500px) {
+        column-count: 3;
+    }
+
+    @media only screen and (max-width: 1200px) {
+        column-count: 2;
+    }
+
+    @media only screen and (max-width: 800px) {
+        column-count: 1;
+    }
 }
 
 .menu-items-section{
